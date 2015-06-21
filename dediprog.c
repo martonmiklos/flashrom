@@ -762,6 +762,18 @@ static int dediprog_shutdown(void *data)
 	return 0;
 }
 
+/* Return the 8-byte UID for the flash */
+static int get_uid(uint8_t buf[8])
+{
+	int ret = dediprog_read(CMD_GET_UID, 0, 0, buf, 8);
+	if (ret != 8) {
+		msg_perr("get_uid failed (%s)!\n", usb_strerror());
+		return 1;
+	}
+
+	return 0;
+}
+
 /* URB numbers refer to the first log ever captured. */
 int dediprog_init(void)
 {
@@ -903,6 +915,13 @@ int dediprog_init(void)
 		dediprog_set_leds(LED_ERROR);
 		return 1;
 	}
+
+	uint8_t uid[8];
+	if (get_uid(uid) != 0)
+		return 1;
+	msg_pdbg("UID:");
+	print_hex_buf(uid, sizeof(uid));
+	msg_pdbg("\n");
 
 	register_spi_master(&spi_master_dediprog);
 

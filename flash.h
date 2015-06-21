@@ -252,6 +252,7 @@ void print_supported_wiki(void);
 
 /* helpers.c */
 uint32_t address_to_bits(uint32_t addr);
+void print_hex_buf(uint8_t *buf, size_t len);
 int bitcount(unsigned long a);
 int max(int a, int b);
 int min(int a, int b);

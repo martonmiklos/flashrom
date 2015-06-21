@@ -34,6 +34,13 @@ uint32_t address_to_bits(uint32_t addr)
 	return 32 - lzb;
 }
 
+void print_hex_buf(uint8_t *buf, size_t len)
+{
+	size_t i;
+	for (i = 0; i < len; i++)
+		msg_pdbg(" %02x", buf[i]);
+}
+
 int bitcount(unsigned long a)
 {
 	int i = 0;
