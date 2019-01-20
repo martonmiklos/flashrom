@@ -158,7 +158,7 @@ static const struct bitbang_spi_master bitbang_spi_master_rayer = {
 	.set_sck = rayer_bitbang_set_sck,
 	.set_mosi = rayer_bitbang_set_mosi,
 	.get_miso = rayer_bitbang_get_miso,
-	.half_period = 0,
+	.half_period = 4,
 };
 
 int rayer_spi_init(void)
