@@ -9245,7 +9245,7 @@ const struct flashchip flashchips[] = {
 			.wps    = {SECURITY, 7, OTP}, /* This bit is set by WPSEL command */
 		},
 		.decode_range	= DECODE_RANGE_SPI25,
-        },
+	},
 
 	{
 		.vendor		= "Macronix",
@@ -11851,6 +11851,1149 @@ const struct flashchip flashchips[] = {
 		.write		= SPI_CHIP_WRITE256,
 		.read		= SPI_CHIP_READ, /* Fast read (0x0B) supported */
 		.voltage	= {2700, 3600},
+	},
+	{
+		.vendor		= "Microchip",
+		.name		= "25A512",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 64,
+		.page_size	= 0x80,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x10000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1750.0, 3000.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA080",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA080A",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA080AB",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA080B",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA080C",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA080CD",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA080D",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA1024",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 128,
+		.page_size	= 0x80,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x20000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA128",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 16,
+		.page_size	= 0x40,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x4000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA160",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 2,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x800, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA160A",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 2,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x800, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA160AB",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 2,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x800, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA160C",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 2,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x800, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA160D",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 2,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x800, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA256",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 32,
+		.page_size	= 0x40,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x8000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA320",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 4,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x1000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA320A",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 4,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x1000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA512",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 64,
+		.page_size	= 0x80,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x10000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA640",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 8,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x2000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25AA640A",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 8,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x2000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 1875.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25C320",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 4,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x1000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 4500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25C640",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 8,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x2000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 4500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC080",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC080A",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC080AB",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC080B",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC080C",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC080CD",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC080D",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 1,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x400, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC1024",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 128,
+		.page_size	= 0x80,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x20000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC128",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 16,
+		.page_size	= 0x40,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x4000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC160",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 2,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x800, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC160A",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 2,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x800, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC160AB",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 2,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x800, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC160C",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 2,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x800, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC160D",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 2,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x800, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC256",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 32,
+		.page_size	= 0x40,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x8000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC320",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 4,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x1000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC320A",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 4,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x1000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC512",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 64,
+		.page_size	= 0x80,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x10000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC640",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 8,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x2000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "25LC640A",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 8,
+		.page_size	= 0x20,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x2000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2500.0, 5500.0 },
+	},
+
+	{
+		.vendor		= "Microchip",
+		.name		= "USBF129",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= 0, /* Not used. */
+		.model_id	= 0,
+		.total_size	= 512,
+		.page_size	= 0x10,
+		.feature_bits	= FEATURE_2BA | FEATURE_NO_ERASE,
+		.tested		= TEST_UNTESTED,
+		.probe		= NO_PROBE_FUNC,
+		.probe_timing	= TIMING_ZERO,
+		.block_erasers	=
+		{
+			{
+				.eraseblocks = { { 0x80000, 1} },
+				.block_erase = SPI_BLOCK_ERASE_EMULATION,
+			}
+		},
+		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP1_SRWD, /* TODO: check */
+		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP1_SRWD,
+		.write		= SPI_CHIP_WRITE256,
+		.read		= SPI_CHIP_READ,
+		.voltage	= { 2300.0, 3600.0 },
 	},
 
 	/* The ST M25P05 is a bit of a problem. It has the same ID as the
